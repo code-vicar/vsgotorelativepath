@@ -89,7 +89,9 @@ function activate(context) {
 
         if (toPathStat) {
             if (toPathStat.isFile()) {
-                vscode.workspace.openTextDocument(toPath)
+                vscode.workspace.openTextDocument(toPath).then((doc) => {
+                    vscode.window.showTextDocument(doc)
+                })
             } else if (toPathStat.isDirectory()) {
                 openDirectory(toPath)
             }
