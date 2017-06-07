@@ -1,0 +1,33 @@
+{
+    "name": "gotorelativepath",
+    "displayName": "goToRelativePath",
+    "description": "Try to open file at relative path in string",
+    "version": "0.0.1",
+    "publisher": "code-vicar",
+    "engines": {
+        "vscode": "^1.12.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.goToRelativePath"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.goToRelativePath",
+                "title": "goToRelativePath"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "vscode": "^1.0.0",
+        "@types/node": "^6.0.40"
+    }
+}
